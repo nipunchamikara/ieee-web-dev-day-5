@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Card, Container, Form, Button, Row, Col } from "react-bootstrap";
 import "./login.css";
 
 export default function Login() {
+	const [email, setemail] = useState("");
+	const [password, setpassword] = useState("");
+
+	//componentDidMount
+	useEffect(() => {
+		console.log("The function useEffect executes");
+	}, []);
+
+	//componentDidUpdate
+	useEffect(() => {
+		console.log("Executed when component updated");
+	}, [email]);
+
+	//componentWillUnmount
+	useEffect(() => {
+		return () => {
+			console.log("Component unmounts");
+		};
+	}, []);
+
 	return (
 		<Container className="container">
 			<Row>
@@ -14,12 +34,12 @@ export default function Login() {
 							<Form>
 								<Form.Group className="mb-3" controlId="formBasicEmail">
 									<Form.Label>Email address</Form.Label>
-									<Form.Control type="email" placeholder="Enter email" />
+									<Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setemail(e.target.value)} />
 									<Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
 								</Form.Group>
 								<Form.Group className="mb-3" controlId="formBasicPassword">
 									<Form.Label>Password</Form.Label>
-									<Form.Control type="password" placeholder="Password" />
+									<Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setpassword(e.target.value)} />
 								</Form.Group>
 								<Link to="/register">
 									<Form.Text className="text-muted">Don't have an account?</Form.Text>
