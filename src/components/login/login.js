@@ -4,6 +4,7 @@ import { Card, Container, Form, Button, Row, Col } from "react-bootstrap";
 import "./login.css";
 
 export default function Login() {
+	const [email, setemail] = useState("");
 
 	//componentDidMount
 	useEffect(() => {
