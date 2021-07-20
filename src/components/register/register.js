@@ -38,4 +38,4 @@ export default function Register() {
 			</Row>
 		</Container>
 	);
-
+}
