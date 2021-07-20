@@ -5,6 +5,7 @@ import "./login.css";
 
 export default function Login() {
 	const [email, setemail] = useState("");
+	const [password, setpassword] = useState("");
 
 	//componentDidMount
 	useEffect(() => {
@@ -42,10 +43,10 @@ export default function Login() {
 									<Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setpassword(e.target.value)} />
 								</Form.Group>
 								<Link to="/register">
-									<Form.Text className="text-muted">Don't have an account?</Form.Text>
+									<Form.Text className="text-muted link">Don't have an account?</Form.Text>
 								</Link>
 								<br />
-								<Button variant="primary" type="submit" className="button">
+								<Button variant="outline-light" type="submit" className="button">
 									Submit
 								</Button>
 							</Form>

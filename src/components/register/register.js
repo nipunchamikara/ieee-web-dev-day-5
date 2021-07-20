@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./register.css";
 
+// Bootstrap
+import { Container, Row, Col, Card, Form, Button} from "react-bootstrap";
+
 export default function Register() {
 	return (
 		<Container className="container" fluid="md">
@@ -25,10 +28,10 @@ export default function Register() {
 									<Form.Control type="password" placeholder="Password" />
 								</Form.Group>
 								<Link to="/">
-									<Form.Text className="text-muted">Already have an account?</Form.Text>
+									<Form.Text className="text-muted link">Already have an account?</Form.Text>
 								</Link>
 								<br />
-								<Button variant="primary" type="submit" className="button">
+								<Button variant="outline-light" type="submit" className="button">
 									Submit
 								</Button>
 							</Form>

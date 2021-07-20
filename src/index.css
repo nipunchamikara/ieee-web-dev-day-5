@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.link {
+	transition: 0.3s !important;
+}
+
+.link:hover {
+	color: white !important;
+}
+
+.card-body {
+  background: rgb(0,0,0);
+  background: linear-gradient(45deg, rgb(25, 27, 78) 0%, rgb(42, 9, 134) 100%);
+
+  padding: 5rem !important;
+}
+
+.card-body:hover {
+  background: rgb(0,0,0);
+  background: linear-gradient(45deg, rgb(20, 22, 63) 0%, rgb(31, 6, 100) 100%);
+}
+
+#root {
+  background: rgb(0,0,0);
+  background: linear-gradient(45deg, rgb(119, 133, 199) 0%, rgb(182, 156, 252) 50%, rgb(222, 172, 255) 100%);
+}
